@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color: #fda500;
+  --text-color: white;
+  --text-secondary-color: rgb(150, 150, 150);
+}
+
+/* === Global Styles === */
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../assets/images/background-adare-restaurant.jpg);
+  background-size: cover;
+  position: center;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80vw;
+  text-align: center;
+}
+
+/* === Header === */
+.container .header {
+  height: 20vh;
+}
+
+/* === Img Logo === */
+.container .header .img-container {
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container .header .img-container img {
+  height: 10vh;
+}
+
+/* === Nav Bar === */
+.container .header .navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 40vw;
+  margin: 0 auto;
+}
+
+.container .header .navbar .nav-item {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: all 0.3s ease-in-out;
+}
+
+.container .header .navbar .nav-item:hover {
+  /*animation: navItemHover 0.3s ease-in-out forwards;*/
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-size: 1.4em;
+}
+
+/*
+@keyframes navItemHover{
+    to {
+        color: var(--primary-color);
+        text-decoration: underline;
+        font-size: 1.4em;
+
+    }
+}}*/
+
+/* === Main Container === */
+.container .main-container {
+  margin: 5vh;
+}
+
+.container .main-container .main-text-container {
+  color: var(--text-color);
+  padding: 2rem;
+}
+
+.container .main-container .main-text-container .main-text {
+  font-family: "Edu NSW ACT Hand Pre", cursive;
+  font-size: 3.5em;
+  transition: all 0.3s;
+}
+
+.container .main-container .main-text-container .main-text:hover {
+  text-shadow: 0.05em 0.05em var(--primary-color);
+}
+
+.container .main-container .main-text-container article {
+  max-width: 40vw;
+  margin: 0 auto;
+}
+
+.container .main-container .main-text-container article p {
+  color: var(--text-secondary-color);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+  text-align: justify;
+}
+
+.container .main-container .main-text-container article p strong a {
+  color: var(--text-color);
+  text-decoration: none;
+  text-shadow: 0.1em 0.1em var(--primary-color);
+}
+
+/* === Maps === */
+.container .main-container .maps-container .maps {
+  height: 50vh;
+  width: 60vw;
+  border: none;
+  border-radius: 20px;
+}
+
+/* === Footer === */
+.container .footer {
+  color: var(--text-color);
+}
+
+.container .footer .footer-text {
+  font-size: 1.1em;
+}
