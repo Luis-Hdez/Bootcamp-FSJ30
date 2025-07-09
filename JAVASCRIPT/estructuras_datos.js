@@ -94,4 +94,73 @@ let programador = new Progrador("Ana", 30, "JavaScript");
 programador.codear(); // Imprime "Ana está programando en JavaScript."
 programador.correr(); // Imprime "Ana está corriendo."
 
+// clase martes 4 de julio de 2025
+// Arrays // Son colecciones ordenadas de elementos
+let arraycitoIdx = [1, 2, 3, 4, 5]; // Array de números
+console.log(arraycitoIdx); // Imprime [1, 2, 3, 4, 5]
+console.log(arraycitoIdx[0]); // Imprime 1 (primer elemento del array)
 
+let arrayAsociativo = [
+  { nombre: "Juan", edad: 25 },
+  { nombre: "Ana", edad: 30 },
+  { nombre: "Pedro", edad: 28 },
+];
+
+// array multideimensional
+let arrayMultidimensional = [
+  [1, 2, 3],
+  [
+    {
+      nombre: "Ana",
+      edad: 30,
+      direccion: { ciudad: "Madrid", pais: "España" },
+    },
+  ],
+];
+
+// accedemos a la posicon 1
+let cajaDeIndiceUno = arrayMultidimensional[1];
+console.log(cajaDeIndiceUno[0]); // Imprime el segundo array dentro del array multidimensional
+console.log(cajaDeIndiceUno[0].nombre); // Imprime "Ana"
+
+console.log(arrayMultidimensional[0][1]); // Imprime 2 (segundo elemento del primer array)
+console.log(arrayMultidimensional[1][0].nombre); // Imprime "Ana"
+console.log(arrayMultidimensional[1][0].direccion.ciudad); // Imprime "Madrid"
+
+// Métodos de arrays
+// recorrer un array
+let nombres = ["Juan", "Ana", "Pedro", "María"];
+// forEach: ejecuta una función para cada elemento del array
+// nos deja utilizar la posicion y el valor del elemento
+nombres.forEach(function (nombre, index) {
+  console.log(index + ": " + nombre); // Imprime el índice y el nombre
+});
+
+nombres.forEach((nombre) => {
+  console.log("Hola, " + nombre + "!");
+});
+
+
+// ordenar un array
+let frutas = ["Banana", "Naranja", "Pera", "Manzana"];
+frutas.sort(); // Ordena el array alfabéticamente
+console.log(frutas); 
+
+// metodos utiles de arrays
+// map: crea un nuevo array con los resultados de aplicar una función a cada elemento del array original
+// recorre el array y nos retorna 
+
+// dar vuelta a un array
+let numeros = [1, 2, 3, 4, 5];
+let numerosInvertidos = numeros.reverse(); // Invierte el orden del array
+console.log(numerosInvertidos); // Imprime [5, 4, 3, 2, 1]
+
+let numerosCuadrados = numeros.map((num) => num * num);
+console.log(numerosCuadrados); // Imprime [1, 4, 9, 16, 25]
+
+
+let names = ["Juan", "Ana", "Pedro", "María"];
+const namesMayus = names.map((name) => {
+   return name.toUpperCase();
+});
+console.log(namesMayus); // Imprime ["JUAN", "ANA", "PEDRO", "MARÍA"]
