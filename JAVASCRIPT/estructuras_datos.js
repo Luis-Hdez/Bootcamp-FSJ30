@@ -140,15 +140,14 @@ nombres.forEach((nombre) => {
   console.log("Hola, " + nombre + "!");
 });
 
-
 // ordenar un array
 let frutas = ["Banana", "Naranja", "Pera", "Manzana"];
 frutas.sort(); // Ordena el array alfabéticamente
-console.log(frutas); 
+console.log(frutas);
 
 // metodos utiles de arrays
 // map: crea un nuevo array con los resultados de aplicar una función a cada elemento del array original
-// recorre el array y nos retorna 
+// recorre el array y nos retorna
 
 // dar vuelta a un array
 let numeros = [1, 2, 3, 4, 5];
@@ -158,9 +157,62 @@ console.log(numerosInvertidos); // Imprime [5, 4, 3, 2, 1]
 let numerosCuadrados = numeros.map((num) => num * num);
 console.log(numerosCuadrados); // Imprime [1, 4, 9, 16, 25]
 
-
 let names = ["Juan", "Ana", "Pedro", "María"];
 const namesMayus = names.map((name) => {
-   return name.toUpperCase();
+  return name.toUpperCase();
 });
 console.log(namesMayus); // Imprime ["JUAN", "ANA", "PEDRO", "MARÍA"]
+
+// foreach que reciba el array completo
+/*let arrayNum = [1, 2, 3, 4, 5];
+arrayNum.forEach((value, index, array) => {
+  arrayNum.pop()
+  console.log(array)
+})*/
+
+// filter: crea un nuevo array con los elementos que cumplen una condición
+let edades = [15, 20, 25, 30, 35];
+let mayoresDeVeinte = edades.filter((edad) => edad > 20);
+console.log(mayoresDeVeinte); // Imprime [25, 30, 35]
+
+const usuarios = [
+  { nombre: "Jorge", edad: 32 },
+  { nombre: "Jorge", edad: 28 },
+  { nombre: "José", edad: 17 }
+];
+
+const mayoresDe21 = usuarios.filter((usuario) => { return usuario.edad > 21 && usuario.edad < 30})
+console.log(mayoresDe21); // Imprime [{ nombre: "Jorge", edad: 28 }]
+
+// find: devuelve el primer elemento que cumple una condición
+const usuarioJorge = usuarios.find ((usuario) => { return usuario.nombre === "Jorge" && usuario.edad === 32 })
+console.log(usuarioJorge)
+
+// Métodos elementales(OBLIGATORIOS) de arrays
+// Agregar datos a un array
+let array = [];
+// push: agrega uno o más elementos al final del array
+array.push(2, 4);
+console.log(array);
+
+// unshift: agrega uno o más elementos al principio del array
+array.unshift(1 , 3);
+console.log(array); 
+
+// pop: elimina el último elemento del array y lo devuelve
+array.pop();
+console.log(array)
+
+// shift: elimina el primer elemento del array y lo devuelve
+array.shift();
+console.log(array);
+
+// obtner la longitud de un array
+console.log(array.length);
+
+console.log("Hola Mundo".length);
+
+// metodo para eliminar los espacos en blanco al inicio y al final de un string
+let texto = "   Hola Mundo   ";
+let textoSinEspacios = texto.trim();
+console.log(textoSinEspacios.length);
