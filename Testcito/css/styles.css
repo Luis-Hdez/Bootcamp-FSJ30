@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Variables de color */
+:root {
+  --primary-color: #192c63;
+  --secondary-color: #0aa5a5;
+  --accent-color: #bb0b83;
+  --text-color: #fff;
+  --card-bg: #233a7a;
+  --form-bg: #f8f9fa;
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-body {
+  background-color: var(--primary-color);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+}
+
+.wraper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.logo-text {
+  font-size: 2.5em;
+}
+
+.logo-text span {
+  color: rgb(10,165,165);
+  text-shadow: 1px 1px 3px var(--text-color);
+}
+
+.logo-text span:hover{
+  color: var(--accent-color);
+  transition: color 0.3s ease;
+}
+
+.wraper .top-header .navbar .nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+}
+
+.wraper .top-header .navbar .nav-menu li a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: 0.3s ease-in-out;
+}
+
+.wraper .top-header .navbar .nav-menu li a:hover {  
+  text-decoration: underline;
+  color: var(--secondary-color)
+}
+
+/* Main Content */
+.main-ctn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.main-ctn .foto-container img {
+  width: 70%;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out , box-shadow 0.3s ease-in-out;
+}
+
+.main-ctn .foto-container img:hover {
+  rotate: 2deg;
+  box-shadow: 0 4px 20px var(--form-bg);
+}
+
+.main-ctn .biografia a .boton {
+  background: var(--accent-color);
+  color: var(--text-color);
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.main .biografia .typing {
+  overflow: hidden;
+  border-right: 1.1em var(--text-color);
+  animation: typing 2s steps(25);
+}
+
+@keyframes typing {
+  to {
+    width: 100%
+  }
+}
+
+/* Cards */
+.wraper .mis-proyectos {
+display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;  
+  padding: 2rem 0;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.wraper .mis-proyectos .projects-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100vw;
+}
+
+.wraper .mis-proyectos .grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.wraper .mis-proyectos .grid-container .project-card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.wraper .mis-proyectos .grid-container .project-card:hover {
+  transform: scale(1.05);
+  
+  box-shadow: 0 4px 20px var(--secondary-color)
+}
+
+.wraper .mis-proyectos .grid-container .project-card .img-top {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.wraper .mis-proyectos .grid-container .project-card .enlaces {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Formulario */
+.wraper .contacto{
+  margin: 0 auto;
+  width: 60vw;
+}
+
+.wraper .contacto .formulario {
+  max-width: 100%;
+  background: var(--form-bg);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.inpt {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.inptt {
+  height: 100px;
+  width: 100%;
+}
+
+.bt-submit {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  padding: 0.75rem;
+  border: none;
+  cursor: pointer;
+}
+
+.redessociales {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+

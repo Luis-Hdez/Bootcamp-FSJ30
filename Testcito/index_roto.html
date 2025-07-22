@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="main-body">
+    <div class="wraper">
+      <header class="top-header">
+        <nav class="navbar">
+          <section class="logo-section">
+            <h2 class="logo-text">L<span>F</span>H</h2>
+          </section>
+          <ul class="nav-menu">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="main-ctn">
+        <section class="biografia">
+          <h1 class="typing">I'm Luis Hernández</h1>
+          <p class="descript">Desarrollador Frontend</p>
+          <a href="#"><button class="boton">Descargar CV</button></a>
+        </section>
+
+        <section class="foto-container">
+          <img src="./assets/images/Perfil.jpeg" alt="Foto Luis" />
+        </section>
+      </main>
+
+      <section class="mis-proyectos">
+        <div class="projects-header">
+          <h2 class="centered">My Projects</h2>
+        </div>
+
+        <div class="grid-container">
+          <article class="project-card">
+            <div>
+              <img class="img-top" src="./assets/images/image.png" />
+            </div>
+            <div class="cardcontent">
+              <h3>Proyecto Uno</h3>
+              <div class="enlaces"><a>GitHub</a><a href="#">Demo</a></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <img class="img-top" src="./assets/images/image.png" />
+            </div>
+            <div class="cardcontent">
+              <h3>Proyecto Dos</h3>
+              <div class="enlaces"><a href="#">Git</a><a href="#">Live</a></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contacto">
+        <form class="formulario">
+          <label>Nombre</label>
+          <input type="text" class="inpt" placeholder="Tu nombre" />
+
+          <label>Correo</label>
+          <input type="email" class="inpt" placeholder="tu@correo" />
+
+          <label>Mensaje</label>
+          <textarea class="inptt" rows="4"></textarea>
+
+          <input type="submit" class="bt-submit" value="Enviar" />
+        </form>
+      </section>
+
+      <footer class="footer-section">
+        <p class="footer-text">Luis Hernández © 2024</p>
+        <div class="redessociales">
+          <a href="#">Linked</a>
+          <a href="#">GitHub</a>
+          <a href="#">Youtube</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
