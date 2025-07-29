@@ -4,26 +4,42 @@ const contenedorCarrito = document.getElementById("cuerpo-carrito");
 let cursoCarrito = [];
 
 function vaciarCarrito(evento) {
-  console.log("Soy el vacia carrito");
+  //console.log("Soy el vacia carrito");
 
   cursoCarrito = [];
   contenedorCarrito.innerHTML = "";
 }
 
 function eliminarCurso(id) {
-  console.log(id);
+  // console.log(id);
 
-  cursoCarrito.map((curso) => {
-    if (curso.id == id) {
-      cursoCarrito = cursoCarrito.filter((curso) => curso.id != id);
-    }
-  });
+  const existe = cursoCarrito.some((cursoArr) => cursoArr.id == id);
+
+  if (existe) {
+    cursoCarrito = cursoCarrito.map((cursoArr) => {
+        if (cursoArr.id == id) {
+          let precioSinSimbolo = parseFloat(cursoArr.precio.substring(1));
+          let cantidadActual = parseFloat(cursoArr.cantidad);
+
+          if (cantidadActual > 1) {
+            cursoArr.cantidad -= 1;
+
+            let precioUnitario = precioSinSimbolo / cantidadActual;
+            let nuevoPrecio = precioUnitario * cursoArr.cantidad;
+
+            cursoArr.precio = `$${nuevoPrecio.toFixed(2)}`;
+
+            return cursoArr;
+          } else {
+            return 0;  // puede ser 0, null, undefined, "", NaN, false, 
+                          // Valores "falsy" 
+          }
+        }
+        return cursoArr;
+      }).filter(Boolean);
+  }
 
   recorrerCarritoHTML();
-
-  // const cursoId = evento.target.getAttribute("data-id");
-  // cursoCarrito = cursoCarrito.filter((curso) => curso.id !== cursoId);
-  // recorrerCarritoHTML();
 }
 
 function agregarCurso(evento) {
@@ -35,23 +51,23 @@ function agregarCurso(evento) {
   // CHequeamos si el curso existe previamente, guardamos true o false
   const existe = cursoCarrito.some((cursoArr) => cursoArr.id === curso.id);
 
-  if (existe === true) {
+  if (existe) {
     cursoCarrito.map((cursoArr) => {
       if (cursoArr.id === curso.id) {
         // aumentar precio
         // utilizar un metdo de string que pueda el quitar el primer caracter
         // metodos prosibles Substring o Slice
         cursoArr.cantidad += 1;
-        cursoArr.precio = cursoArr.precio.substring(1); // el dato esta en prosicion 0
+        cursoArr.precio = cursoArr.precio.substring(1); // el dato esta en prosicion 0, primero caracter
 
         // transformamos el string a numero
         // parseInt or parseFloat
         cursoArr.precio = parseFloat(cursoArr.precio);
         cursoArr.cantidad = parseFloat(cursoArr.cantidad);
 
-        let basePrecio = cursoArr.precio / (cursoArr.cantidad - 1);
-        cursoArr.precio = basePrecio * cursoArr.cantidad;
-        cursoArr.precio = `$${cursoArr.precio}`;
+        let precioUnitario = cursoArr.precio / (cursoArr.cantidad - 1);
+        cursoArr.precio = precioUnitario * cursoArr.cantidad;
+        cursoArr.precio = `$${cursoArr.precio.toFixed(2)}`;
 
         return cursoArr;
       }
