@@ -44,7 +44,7 @@ let arraycito : number [] = [1, 2, 3];
 // tupla
 let arrayEspecifico : [number, string] = [1, "Luis"];
 
-// podemo llegar a tener 2 tipos de datos
+// podemos llegar a tener 2 tipos de datos
 let dosTiposDeDatos : (number | string )[]= [1, "dos", 3, 4]
 // array de numeros o string
 let arrayDosTipos : number[]|string[] = [1, 2, 3, 4]
@@ -58,3 +58,4 @@ type Persona = {
 let fsj30 : Persona[] = [{name : "Jairo", age : 27}]
 
 console.log(fsj30[0]);
+
