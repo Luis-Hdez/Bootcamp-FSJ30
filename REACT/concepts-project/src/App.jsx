@@ -1,18 +1,17 @@
-import './App.css'
-import Saludo from './components/Saludo'
+import "./App.css";
+import Saludo from "./components/Saludo";
 
 function App() {
-
   return (
-    <> {/* Estes es el fragment -> Nos diuja un contenedor en el HTML */}
+    <>{/* Estes es el fragment -> Nos diuja un contenedor en el HTML */}
 
       <h1>Holaaa</h1>
 
       {/*Este es el primer componente*/}
-      <Saludo nombre='Luis'/>
+      <Saludo nombre="Luis" apellido="Hernandez"/>
+      <Saludo nombre="Fernando" />
     </>
-  )
+  );
 }
 
-export default App
-
+export default App;
