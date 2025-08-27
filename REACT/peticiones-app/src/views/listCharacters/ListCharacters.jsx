@@ -1,8 +1,8 @@
 // rafc -> snippet para crear el componente funcional con flecha
 
 import { useContext, useEffect, useState } from "react";
-import { CardCharacter } from "./CardCharacter";
-import { FavoritesContext } from "../contexts/FavoritesContext";
+import { CardCharacter } from "../../components/CardCharacter";
+import { FavoritesContext } from "../../contexts/FavoritesContext";
 
 export const ListCharacters = () => {
 
@@ -17,7 +17,7 @@ export const ListCharacters = () => {
   const {favorites, setFavorites} = useContext(FavoritesContext)
   //console.log(favorites);
   
-  
+
   // Las funciones 
 
   const peticionAPI = () => {
