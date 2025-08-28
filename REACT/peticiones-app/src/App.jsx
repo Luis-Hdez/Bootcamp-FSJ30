@@ -2,6 +2,7 @@ import './App.css'
 import { ListCharacters } from './views/listCharacters/ListCharacters'
 import { FavoritesDataProvider } from './contexts/FavoritesContext'
 import {BrowserRouter, Route, Routes} from 'react-router'
+import { SessionView } from './views/session/SessionView'
 
 // Asincronismo -> manejar codigo que tarde en completarse como solicitudes a un servidor o
 // de archivos, sin bloquear el resto del programa
@@ -19,6 +20,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<ListCharacters/>}/>
+          <Route path='/session' element={<SessionView/>}/>
           
         </Routes>
       </BrowserRouter>
