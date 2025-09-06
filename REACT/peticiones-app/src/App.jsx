@@ -3,6 +3,8 @@ import { ListCharacters } from './views/listCharacters/ListCharacters'
 import { FavoritesDataProvider } from './contexts/FavoritesContext'
 import {BrowserRouter, Link, Route, Routes} from 'react-router'
 import { SessionView } from './views/session/SessionView'
+import { Navbar } from './components/Navbar'
+import { SearchCharacter } from './views/searchCharacter/SearchCharacter'
 
 // Asincronismo -> manejar codigo que tarde en completarse como solicitudes a un servidor o
 // de archivos, sin bloquear el resto del programa
@@ -18,10 +20,11 @@ function App() {
 
       {/* Activamos React Router */}
       <BrowserRouter>
-        <Link to="/session" className='btn btn-primary'>Registrar</Link>
+        <Navbar />
         <Routes>
           <Route path='/' element={<ListCharacters/>}/>
           <Route path='/session' element={<SessionView/>}/>
+          <Route path='/search-character' element={<SearchCharacter />}/>
           
         </Routes>
       </BrowserRouter>

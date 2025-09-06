@@ -35,7 +35,12 @@ export const LoginComponent = () => {
 
 
   return (
-    <div>LoginComponent
+    <section className="row justify-content-center">
+      <div className="col-6">
+
+      <div className="card">
+        <div className="card-body">
+          <h3 className="card-title text-center">Sign In</h3>
       <form onSubmit={handleSubmit(onSubmitForm)}>
         <label className="form-label" >Email: </label>
         <input type="text" className="form-control" name="input_email" {...register('email')}/>
@@ -45,6 +50,9 @@ export const LoginComponent = () => {
         <p className='text-danger'>{errors.password && errors.password.message }</p>
         <button type="submit">Send</button>
       </form>
-    </div>
+        </div>
+      </div>
+      </div>
+    </section>
   )
 }

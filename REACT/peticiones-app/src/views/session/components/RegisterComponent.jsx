@@ -55,7 +55,12 @@ export const RegisterComponent = () => {
 
 
   return (
-    <div>Register
+    <section className="row justify-content-center">
+      <div className="col-6">
+
+      <div className="card">
+        <div className="card-body">
+          <h3 className="card-title text-center">Sign Up</h3>
       {/* <form onSubmit={handleSubmit}> */}
       <form onSubmit={handleSubmit(onSubmitForm)}>
         <label className="form-label" >Email: </label>
@@ -71,6 +76,9 @@ export const RegisterComponent = () => {
         <p>{errors.confirm_pasword && errors.confirm_pasword.message }</p>
         <button type="submit">Send</button>
       </form>
+      </div>
     </div>
+      </div>
+    </section>
   )
 }

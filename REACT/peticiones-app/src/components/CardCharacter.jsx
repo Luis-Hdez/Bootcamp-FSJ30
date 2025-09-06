@@ -1,4 +1,4 @@
-export const CardCharacter = ({ id, name, image, status, listFavorites, changeFavorites }) => {
+export const CardCharacter = ({ id, name, image, status, listFavorites = null, changeFavorites}) => {
 
   /* parte logica para poder utilizar la lista de favoritos */
   const handleAddToFavorites = () => {
@@ -36,10 +36,9 @@ export const CardCharacter = ({ id, name, image, status, listFavorites, changeFa
           <h5 className="card-title">{name}</h5>
           <p className="card-text">{status}</p>
 
-          {findCharacterInFavorites () ? <button className="btn btn-danger" onClick={handleDeleteToFavorites}>Delete to Favorite</button> 
-          : <button className="btn btn-primary" onClick={handleAddToFavorites}>Add to Favorite</button>}
-          
-          
+          {listFavorites ? findCharacterInFavorites () ? <button className="btn btn-danger" onClick={handleDeleteToFavorites}>Delete to Favorite</button> 
+          : <button className="btn btn-primary" onClick={handleAddToFavorites}>Add to Favorite</button>
+          : null}
         </div>
       </div>
     </div>
