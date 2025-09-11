@@ -94,5 +94,26 @@ switch ($dia) {
 $mensaje = ($edad >= 18) ? "Eres mayr de edad\n" : "Eres menor de edad\n";
 echo $mensaje."\n";
 
+// estruncturas repetitivas
+// while
+$contador = 0;
+while ($contador < 5) {
+  echo "Contador: {$contador}\n";
+  $contador++;
+}
+
+// do while
+$contador = 0;
+do {
+  echo "Contador: {$contador}\n";
+  $contador++;
+} while ($contador < 5);
+
+// for
+for ($i = 0; $i < 5; $i++) {
+  echo "contador: {$i}\n";
+}
+
+// 
 
 ?>
