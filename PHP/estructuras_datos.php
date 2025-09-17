@@ -214,14 +214,20 @@ class LinkedList
     if ($this->head === null) {
       $this->head = $newNode;
     } else {
-      $this->head = setNext($newNode);
+      $current = $this->head;
+      // recorremos la lista mientras el siguiente no sea nulo
+      while ($current->getNext()!==null) {
+        $current = $current->getNext();
+      }
+      // cuando encontramos el final, agregamos el nuevo nodo
+      $current->setNext($newNode);
     }
   }
-
  
 }
 
 $list = new LinkedList();
 $list->add(3);
 $list->add(1);
+$list->add(5);
 print_r($list);
