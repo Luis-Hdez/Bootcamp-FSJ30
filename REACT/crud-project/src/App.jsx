@@ -179,15 +179,13 @@ function App() {
         {task.map((task) => (
           <div key={task.id} className="col-sm-6 col-md-6 col-lg-4 mb-4">
             <div
-              className={`card h-100 ${
-                task.completed ? "border-success" : "border-primary"
-              }`}
+              className={`card h-100 ${task.completed ? "border-success" : "border-primary"
+                }`}
             >
               <div className="card-header d-flex justify-content-between align-items-center">
                 <span
-                  className={`badge ${
-                    task.completed ? "bg-success" : "bg-warning"
-                  }`}
+                  className={`badge ${task.completed ? "bg-success" : "bg-warning"
+                    }`}
                 >
                   {task.completed ? "Completada" : "Pendiente"}
                 </span>
@@ -209,11 +207,10 @@ function App() {
                 <div className="d-flex justify-content-between align-items-center mt-3">
                   {/* <small className="text-muted">ID: #{task.id}</small> */}
                   <button
-                    className={`btn btn-sm ${
-                      task.completed  
+                    className={`btn btn-sm ${task.completed
                         ? "btn-outline-warning"
                         : "btn-outline-success"
-                    }`}
+                      }`}
                   >
                     {task.completed ? "Marcar pendiente" : "Marcar completada"}
                   </button>
