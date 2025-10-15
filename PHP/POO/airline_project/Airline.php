@@ -11,7 +11,6 @@ class Airline{
         $this->name = $nameParam;
         $this->cantidad_aviones = $cantidad_avionesParam;
         $this->tipo_aerolinea = $tipo_aerolineaParam;
-
     }
 
     /**
